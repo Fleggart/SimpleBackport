@@ -19,17 +19,14 @@
 // Java package
 package my.wolodiam.simplebackport;
 // Import minecraft forge classes
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 // Import mod classes
 import my.wolodiam.simplebackport.utils.*;
 import my.wolodiam.simplebackport.utils.proxy.CommonProxy;
 import my.wolodiam.simplebackport.utils.registry.*;
-import my.wolodiam.simplebackport.utils.handlers.GuiHandler;
 
 @Mod(modid = DATA.MODID, name = DATA.NAME, version = DATA.VERSION)
 public class SimpleBackport
@@ -39,8 +36,6 @@ public class SimpleBackport
     // Instance of mod
     @Mod.Instance
     public static SimpleBackport instance;
-    // Gui handler
-    private static GuiHandler guihandler = new GuiHandler();
     // Preinit faze
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -50,7 +45,6 @@ public class SimpleBackport
         proxy.preInit(event);
         ItemRegister.init();
         BlockRegister.init();
-        NetworkRegistry.INSTANCE.registerGuiHandler(instance, guihandler);
     }
     // Init faze
     @Mod.EventHandler

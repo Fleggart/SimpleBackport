@@ -27,10 +27,4 @@ public class DATA {
     public static final String NAME    = "SimpleBackport";
     public static final String AUTHOR  = "WolodiaM";
     public static Logger logger;
-    public enum GUIID
-    {
-        FLETCHING_TABLE(1);
-        public int id;
-        GUIID(int id){this.id = id;}
-    }
 }

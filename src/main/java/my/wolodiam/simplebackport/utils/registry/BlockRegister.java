@@ -38,7 +38,6 @@ import my.wolodiam.simplebackport.utils.registry.data.BlockRegistryType;
 import my.wolodiam.simplebackport.mc1_16.blocks.*;
 import my.wolodiam.simplebackport.mc1_20.blocks.signs.*;
 import my.wolodiam.simplebackport.mc1_14.blocks.signs.*;
-import my.wolodiam.simplebackport.mc1_14.blocks.crafters.*;
 // Import statics from mod classes
 import static  my.wolodiam.simplebackport.SimpleBackport.instance;
 
@@ -76,8 +75,6 @@ public class BlockRegister {
      * oak_sign_top
      * spruce_sign_side
      * spruce_sign_top
-     ^   Crafters
-     * fletching_table
      */
     public static ArrayList<BlockRegistryType> BLOCKS = new ArrayList<BlockRegistryType>();
     public static Block OAK_HANGING_SIGN_TOP_FULL;
@@ -106,7 +103,7 @@ public class BlockRegister {
         BLOCKS.add(new BlockRegistryType(new SpruceHangingSignSideBlock("spruce_hanging_sign_side"), "spruce_hanging_sign_side"));
         BLOCKS.add(new BlockRegistryType(new BirchHangingSignTopFullBlock("birch_hanging_sign_top_full"), "birch_hanging_sign_top_full"));
         BLOCKS.add(new BlockRegistryType(new BirchHangingSignSideBlock("birch_hanging_sign_side"), "birch_hanging_sign_side"));
-        BLOCKS.add(new BlockRegistryType(new DarkOakHangingSignTopFullBlock("dark_oak__hanging_sign_top_full"), "dark_oak__hanging_sign_top_full"));
+        BLOCKS.add(new BlockRegistryType(new DarkOakHangingSignTopFullBlock("dark_oak_hanging_sign_top_full"), "dark_oak_hanging_sign_top_full"));
         BLOCKS.add(new BlockRegistryType(new DarkOakHangingSignSideBlock("dark_oak_hanging_sign_side"), "dark_oak_hanging_sign_side"));
         BLOCKS.add(new BlockRegistryType(new AcaciaHangingSignTopFullBlock("acacia_hanging_sign_top_full"), "acacia_hanging_sign_top_full"));
         BLOCKS.add(new BlockRegistryType(new AcaciaHangingSignSideBlock("acacia_hanging_sign_side"), "acacia_hanging_sign_side"));
@@ -125,14 +122,13 @@ public class BlockRegister {
         BLOCKS.add(new BlockRegistryType(new DarkOakSignTop("dark_oak_sign_top"), "dark_oak_sign_top"));
         BLOCKS.add(new BlockRegistryType(new JungleSignSide("jungle_sign_side"), "jungle_sign_side"));
         BLOCKS.add(new BlockRegistryType(new JungleSignTop("jungle_sign_top"), "jungle_sign_top"));
-        BLOCKS.add(new BlockRegistryType(new FletchingTable("fletching_table"), "fletching_table"));
         OAK_HANGING_SIGN_TOP_FULL      = get("oak_hanging_sign_top_full");
         OAK_HANGING_SIGN_SIDE          = get("oak_hanging_sign_side");
         SPRUCE_HANGING_SIGN_TOP_FULL   = get("spruce_hanging_sign_top_full");
         SPRUCE_HANGING_SIGN_SIDE       = get("spruce_hanging_sign_side");
         BIRCH_HANGING_SIGN_TOP_FULL    = get("birch_hanging_sign_top_full");
         BIRCH_HANGING_SIGN_SIDE        = get("birch_hanging_sign_side");
-        DARK_OAK_HANGING_SIGN_TOP_FULL = get("dark_oak__hanging_sign_top_full");
+        DARK_OAK_HANGING_SIGN_TOP_FULL = get("dark_oak_hanging_sign_top_full");
         DARK_OAK_HANGING_SIGN_SIDE     = get("dark_oak_hanging_sign_side");
     }
 

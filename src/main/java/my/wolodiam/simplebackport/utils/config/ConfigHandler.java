@@ -26,16 +26,5 @@ import my.wolodiam.simplebackport.utils.DATA;
 @SuppressWarnings("WeakerAccess")
 @Config(modid = DATA.MODID, name = "SimpleBackport", category = "")
 public class ConfigHandler {
-    @Config.Comment("All related to blocks")
-    public static Blocks blocks = new Blocks();
-
-    public static class Blocks {
-        @Config.Comment({
-                "Does fletching table has custom crafts or act as in vanila",
-                "Default = true"
-        })
-        @Config.Name("Custom fletching table")
-        @Config.RequiresMcRestart()
-        public boolean flethcing_table_crafts = true;
-    }
+    // No configuration options available
 }
