@@ -16,20 +16,15 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 // Java package
-package my.wolodiam.simplebackport.utils.handlers;
-// Import minecraft classes
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.network.IGuiHandler;
+package my.wolodiam.simplebackport.utils.config;
+// Import minecraftforge classes
+import net.minecraftforge.common.config.Config;
+// Import mod classes
+import my.wolodiam.simplebackport.utils.DATA;
 
-public class GuiHandler implements IGuiHandler {
-    @Override
-    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        return null;
-    }
 
-    @Override
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        return null;
-    }
+@SuppressWarnings("WeakerAccess")
+@Config(modid = DATA.MODID, name = "SimpleBackport", category = "")
+public class ConfigHandler {
+    // No configuration options available
 }
