@@ -16,26 +16,20 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 // Java package
-package my.wolodiam.simplebackport.utils.config;
-// Import minecraftforge classes
-import net.minecraftforge.common.config.Config;
-// Import mod classes
-import my.wolodiam.simplebackport.utils.DATA;
+package my.wolodiam.simplebackport.utils.handlers;
+// Import minecraft classes
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.IGuiHandler;
 
+public class GuiHandler implements IGuiHandler {
+    @Override
+    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+        return null;
+    }
 
-@SuppressWarnings("WeakerAccess")
-@Config(modid = DATA.MODID, name = "SimpleBackport", category = "")
-public class ConfigHandler {
-    @Config.Comment("All related to blocks")
-    public static Blocks blocks = new Blocks();
-
-    public static class Blocks {
-        @Config.Comment({
-                "Does fletching table has custom crafts or act as in vanila",
-                "Default = true"
-        })
-        @Config.Name("Custom fletching table")
-        @Config.RequiresMcRestart()
-        public boolean flethcing_table_crafts = true;
+    @Override
+    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+        return null;
     }
 }
