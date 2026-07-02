@@ -29,7 +29,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import my.wolodiam.simplebackport.utils.*;
 import my.wolodiam.simplebackport.utils.proxy.CommonProxy;
 import my.wolodiam.simplebackport.utils.registry.*;
-import my.wolodiam.simplebackport.mc1_16.commands.LocateBiome;
 import my.wolodiam.simplebackport.utils.handlers.GuiHandler;
 
 @Mod(modid = DATA.MODID, name = DATA.NAME, version = DATA.VERSION)
@@ -60,11 +59,4 @@ public class SimpleBackport
         DATA.logger.info("Init faze of SimpleBackport");
         TileEntityRegister.registerTE();
     }
-    @Mod.EventHandler
-    public void serverInit(FMLServerStartingEvent event)
-    {
-        DATA.logger.info("Server init faze of SimpleBackport");
-        event.registerServerCommand(new LocateBiome());
-    }
 }
-
