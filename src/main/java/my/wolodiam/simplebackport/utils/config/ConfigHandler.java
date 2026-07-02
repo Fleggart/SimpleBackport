@@ -26,18 +26,9 @@ import my.wolodiam.simplebackport.utils.DATA;
 @SuppressWarnings("WeakerAccess")
 @Config(modid = DATA.MODID, name = "SimpleBackport", category = "")
 public class ConfigHandler {
-    @Config.Comment("All related to minecraft commands")
-    public static Commands commands = new Commands();
     @Config.Comment("All related to blocks")
     public static Blocks blocks = new Blocks();
-    public static class Commands {
-        @Config.Comment({
-                "Search radius for locatebiome, after will be multiplayed by biome size index",
-                "Default - 2048"})
-        @Config.Name("Locatebiome search radius")
-        @Config.RangeInt(min = 0)
-        public int locatebiome_radius = 2048;
-    }
+
     public static class Blocks {
         @Config.Comment({
                 "Does fletching table has custom crafts or act as in vanila",
@@ -48,9 +39,3 @@ public class ConfigHandler {
         public boolean flethcing_table_crafts = true;
     }
 }
-
-
-
-
-
-
